@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FoodExpress - Food Delivery</title>
 
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#333;
+    }
+
+    header{
+      background:#ff5722;
+      color:white;
+      padding:20px;
+      text-align:center;
+      box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav{
+      margin-top:10px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+    }
+
+    .hero{
+      height:400px;
+      background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1400') center/cover no-repeat;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+    }
+
+    .hero-content{
+      background:rgba(0,0,0,0.6);
+      padding:30px;
+      border-radius:10px;
+    }
+
+    .hero h1{
+      font-size:50px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:20px;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      background:#ff5722;
+      color:white;
+      padding:12px 25px;
+      border:none;
+      border-radius:5px;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#e64a19;
+    }
+
+    .section-title{
+      text-align:center;
+      margin:40px 0 20px;
+      font-size:32px;
+      color:#ff5722;
+    }
+
+    .food-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:20px;
+      padding:20px;
+    }
+
+    .food-card{
+      background:white;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .food-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .food-card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .food-card-content{
+      padding:15px;
+    }
+
+    .food-card h3{
+      margin-bottom:10px;
+    }
+
+    .price{
+      color:#ff5722;
+      font-size:20px;
+      font-weight:bold;
+      margin:10px 0;
+    }
+
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    .pipeline{
+      background:white;
+      margin:40px auto;
+      width:90%;
+      max-width:1000px;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .pipeline h2{
+      color:#ff5722;
+      margin-bottom:15px;
+    }
+
+    .status{
+      color:green;
+      font-weight:bold;
+      font-size:20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🍔 FoodExpress</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">Offers</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Delicious Food Delivered Fast</h1>
+      <p>Fresh meals at your doorstep</p>
+      <button class="btn">Order Now</button>
+    </div>
+  </section>
+
+  <h2 class="section-title">Popular Foods</h2>
+
+  <section class="food-container">
+
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200" alt="Burger">
+      <div class="food-card-content">
+        <h3>Cheese Burger</h3>
+        <p>Loaded with cheese and fresh veggies.</p>
+        <div class="price">₹199</div>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200" alt="Pizza">
+      <div class="food-card-content">
+        <h3>Italian Pizza</h3>
+        <p>Hot pizza with extra toppings.</p>
+        <div class="price">₹349</div>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="https://images.unsplash.com/photo-1604908176997-431f7d62963d?q=80&w=1200" alt="Biryani">
+      <div class="food-card-content">
+        <h3>Chicken Biryani</h3>
+        <p>Authentic spicy biryani special.</p>
+        <div class="price">₹299</div>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="pipeline">
+    <h2>🚀 DevOps Pipeline Test</h2>
+    <p>This static website is deployed using:</p>
+    <br>
+    <ul>
+      <li>AWS S3 Static Website Hosting</li>
+      <li>CloudFront CDN Distribution</li>
+      <li>CI/CD Pipeline Deployment</li>
+    </ul>
+
+    <br>
+    <p class="status">✅ Pipeline Deployment Successful</p>
+  </section>
+
+  <footer>
+    <p>© 2026 FoodExpress | Hosted on AWS S3 + CloudFront</p>
+  </footer>
+
+</body>
+</html>
